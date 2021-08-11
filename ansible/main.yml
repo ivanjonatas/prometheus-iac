@@ -1,0 +1,10 @@
+---
+- hosts: prometheus
+  become: yes 
+  roles:
+  - install_prometheus
+  - install_grafana
+
+# - hosts: node
+#   roles:
+#   - install_exporteds

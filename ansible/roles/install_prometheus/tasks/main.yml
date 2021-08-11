@@ -1,0 +1,11 @@
+---
+# tasks file for install_prometheus
+- name: Update repositories cache and install "foo" package
+  apt:
+    name: update SO
+    update_cache: yes
+
+- name: Download prometheus
+  include: "prometheus.yaml"
+
+  wget https://github.com/prometheus/prometheus/releases/download/v2.0.0/prometheus-2.0.0.linux-amd64.tar.gz
