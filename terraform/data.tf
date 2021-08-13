@@ -5,8 +5,8 @@ data "aws_vpcs" "vpc_default" {
 }
 
 data "aws_subnet_ids" "subnet_public" {
-    vpc_id = "vpc-b612b5cb"
-    // pvc_id = aws_vpcs.vpc_default.id
+    // vpc_id = "vpc-*****"
+    pvc_id = aws_vpcs.vpc_default.id
 
   filter {
     name   = "tag:Name"
